@@ -6,7 +6,7 @@ Team Lead: [DEVIKA R] - [VIDYA ACADEMY OF SCIENCE AND TECHNOLOGY,THRISSUR]
 Member 2: [DEVIKA S NAIR] - [VIDYA ACADEMY OF SCIENCE AND TECHNOLOGY,THRISSUR]
 
 Project Description
-**Pothole Measurement Tool**  
+pothmeter:  
 
 A web app to measure pothole dimensions using photos. Features:  
 Camera/upload – Capture or upload images with a reference object (ruler/coin)  
@@ -22,30 +22,32 @@ Why use boring measuring tapes when you can:
 2. Doodle like a toddler  
 3. Get government-grade measurements
 Technical Details
+
+
+
 Technologies/Components Used
 For Software:
-
 - Languages: JavaScript (the kind that doesn't need coffee)  
 - Frameworks: Pure chaos (and HTML5 Canvas)  
 - Libraries: Math.js (for pretending we're good at math)  
 - Tools: Browser DevTools (for crying when it breaks
+- 
 Implementation
 For Software:
 ```bash
+
 Installation
 Just open index.html (no npm install needed because we're kind like that)
 
 Run
 Click like your life depends on it
 
-Project Documentation
-For Software:
 
 Screenshots (Add at least 3)
 https://drive.google.com/drive/folders/1BOk9dghfOaN5iGMEhFWnzku3qVhW85iN?usp=sharing
 
 
 Team Contributions
-DEVIKA R: HTML,UI UX
-DEVIKA S NAIR:MAIN CODING,IDEA]
+DEVIKA R:UI-UX, CSS
+DEVIKA S NAIR:IDEA, HTML,JS
 
