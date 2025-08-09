@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.step {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+.step-number {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.canvas-container {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+canvas {
+    border: 1px solid #ddd;
+    max-width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.video-container {
+    margin: 20px 0;
+    position: relative;
+    display: none;
+}
+#cameraFeed {
+    width: 100%;
+    max-height: 400px;
+    background-color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.camera-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+input, select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.result-container {
+    margin-top: 25px;
+    background-color: #e8f4fc;
+    border-radius: 8px;
+    padding: 20px;
+}
+.result-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+.result-value {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 5px 0;
+}
+.unit-selector {
+    margin: 15px 0;
+}
+.instructions {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+.source-selector {
+    margin-bottom: 20px;
+}
+.tab-buttons {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.tab-button {
+    flex: 1;
+    padding: 12px;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.tab-button.active {
+    background-color: #3498db;
+    color: white;
+}
+.depth-input {
+    margin-top: 15px;
+}
+.measurement-options {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+.option-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.option-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+.shape-selector {
+    margin: 15px 0;
+}

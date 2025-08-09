@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pothole Measurement Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Pothole Measurement Tool</h1>
+        
+        <div class="source-selector">
+            <div class="tab-buttons">
+                <button id="cameraTab" class="tab-button active">Use Camera</button>
+                <button id="uploadTab" class="tab-button">Upload Image</button>
+            </div>
+            
+            <div id="cameraSource" class="step">
+                <div class="step-number">Step 1: Capture Image</div>
+                <p>Take a photo of the pothole with a reference object (like a ruler or coin) in the same plane.</p>
+                <div class="video-container" id="videoContainer">
+                    <video id="cameraFeed" autoplay playsinline></video>
+                    <div class="camera-controls">
+                        <button id="startCamera">Start Camera</button>
+                        <button id="capturePhoto" disabled>Capture Photo</button>
+                        <button id="flipCamera" disabled>Flip Camera</button>
+                    </div>
+                </div>
+                <p class="instructions">For best results, position the camera directly above the pothole. Include a reference object of known size in the image.</p>
+            </div>
+            
+            <div id="uploadSource" class="step" style="display: none;">
+                <div class="step-number">Step 1: Upload Image</div>
+                <p>Upload a photo of the pothole with a reference object (like a ruler or coin) in the same plane.</p>
+                <input type="file" id="imageUpload" accept="image/*">
+                <p class="instructions">For best results, the photo should be taken directly above the pothole with a reference object of known size.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">Step 2: Set Reference Scale</div>
+            <div class="unit-selector">
+                <label for="unit">Measurement Unit:</label>
+                <select id="unit">
+                    <option value="cm">Centimeters</option>
+                    <option value="in">Inches</option>
+                </select>
+            </div>
+            <div>
+                <label for="knownLength">Known length of reference object:</label>
+                <input type="number" id="knownLength" min="0.1" step="0.1" placeholder="e.g., 10">
+            </div>
+            <p>Draw a line on the reference object in the image below to set the scale.</p>
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="controls">
+                <button id="drawReferenceBtn">Draw Reference Line</button>
+                <button id="clearReferenceBtn" disabled>Clear Reference</button>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">Step 3: Select Measurement Type</div>
+            <div class="measurement-options">
+                <div id="lengthOption" class="option-btn active">Length</div>
+                <div id="areaOption" class="option-btn">Area</div>
+                <div id="volumeOption" class="option-btn">Volume</div>
+            </div>
+            
+            <div id="volumeControls" style="display: none;">
+                <div class="depth-input">
+                    <label for="waterDepth">Estimated water depth in pothole (in selected units):</label>
+                    <input type="number" id="waterDepth" min="0" step="0.1" placeholder="e.g., 2.5">
+                </div>
+                <div class="shape-selector">
+                    <label for="potholeShape">Pothole shape approximation:</label>
+                    <select id="potholeShape">
+                        <option value="circular">Circular</option>
+                        <option value="rectangular">Rectangular</option>
+                        <option value="elliptical">Elliptical</option>
+                    </select>
+                </div>
+            </div>
+            
+            <p id="measurementInstructions">Draw a line across the pothole to measure its length.</p>
+            <div class="controls">
+                <button id="measureBtn" disabled>Measure Pothole</button>
+                <button id="clearMeasurementBtn" disabled>Clear Measurement</button>
+                <button id="completePolygonBtn" style="display: none;">Complete Measurement</button>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <div class="result-title">Measurement Results</div>
+            <div id="lengthResult" style="display: block;">
+                <div>Length:</div>
+                <div class="result-value" id="lengthValue">-</div>
+            </div>
+            <div id="areaResult" style="display: none;">
+                <div>Area:</div>
+                <div class="result-value" id="areaValue">-</div>
+            </div>
+            <div id="volumeResult" style="display: none;">
+                <div>Water Volume:</div>
+                <div class="result-value" id="volumeValue">-</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
