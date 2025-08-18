@@ -12,7 +12,7 @@ A web app to measure pothole dimensions using photos. Features:
 Camera/upload – Capture or upload images with a reference object (ruler/coin)  
 Measure – Length, area, and water volume (with depth input)  
 Easy scaling – Set reference length for accurate measurements  
-No backend – Works fully in your browser                                                                                                                                     
+No backend – Works fully in your browser                                               ****use laptop or computer for better experience *****                                                                               
 The Problem (that doesn't exist)   
 ["Normal people look at potholes and see problems - we see beautiful elliptical cylinders waiting to be measured!" ]
 
